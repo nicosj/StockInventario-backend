@@ -45,5 +45,16 @@ public class CategoriaRestController {
         ResponseEntity<CategoriaResponseRest> responseEntity = service.Save(categoria);
         return responseEntity;
     }
+    /**
+     *
+     * @param id
+     * @param categoria
+     * @return
+     */
+    @PutMapping("/categorias/{id}")
+    public ResponseEntity<CategoriaResponseRest> update(@PathVariable Long id, @RequestBody Categoria categoria) {
+        ResponseEntity<CategoriaResponseRest> responseEntity = service.Update(id,categoria);
+        return responseEntity;
+    }
 
 }
