@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 public interface ICategoriaService {
     public ResponseEntity<CategoriaResponseRest> search();
     public ResponseEntity<CategoriaResponseRest> searchById(Long id);
+    public ResponseEntity<CategoriaResponseRest> deleteById(Long id);
     public ResponseEntity<CategoriaResponseRest> Save(Categoria categoria);
     public ResponseEntity<CategoriaResponseRest> Update(Long id, Categoria categoria);
 
